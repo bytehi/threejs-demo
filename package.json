@@ -1,0 +1,25 @@
+{
+  "name": "threejs-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter=packages/* run build",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "change": "changeset add",
+    "change:version": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.148.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "lil-gui": "^0.17.0",
+    "parcel": "^2.8.2"
+  }
+}
